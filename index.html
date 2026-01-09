@@ -1,14 +1,137 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Digital - Miqueas Drovetta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div id="app">
+        <!-- HOME -->
+        <section id="home">
+            <h1 class="hero-title fade-in-element">Miqueas Drovetta</h1>
+            <h2 class="fade-in-element" data-translate="hero_subtitle">Software Developer | Performance Optimization</h2>
+            <p class="fade-in-element profile-text" data-translate="profile_text">Desarrollador con 3 años en el rubro IT y experiencia en mantenimiento y desarrollo de software ERP. Amplio conocimiento de circuitos empresariales, gestión de requerimientos, resolución de incidencias, permisos de usuario, vistas personalizadas e informes. Fuerte dominio de .NET, Git/GitHub y automatización de procesos.</p>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section id="experiencia">
+            <h2 class="fade-in-element" data-translate="experience_title">Experiencia y Educación</h2>
+            <div class="timeline">
+                 <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 data-translate="job1_title">Backend Developer - Flexxus</h3>
+                        <span data-translate="job1_date">may. 2023 – actualidad</span>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li data-translate="job1_desc1">Resolución de incidentes en módulos ERP y análisis de causa raíz.</li>
+                            <li data-translate="job1_desc2">Relevamiento y diseño de mejoras para optimizar workflows.</li>
+                            <li data-translate="job1_desc3">Desarrollo backend en Delphi y optimización de consultas SQL en Firebird.</li>
+                            <li data-translate="job1_desc4">Implementación de pruebas automatizadas con TestComplete.</li>
+                            <li data-translate="job1_desc5">Participación activa en sprints bajo metodología Scrum.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 data-translate="job2_title">Profesor - Inst. Téc. Superior Córdoba</h3>
+                        <span data-translate="job2_date">jun. 2025 – actualidad</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p data-translate="job2_desc">A cargo de la cátedra "Elementos de Matemática y Lógica", impartiendo clases de lógica y programación a estudiantes de nivel terciario y planificando el contenido educativo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 data-translate="job3_title">Voluntario Educativo - Coderdojo Córdoba</h3>
+                        <span data-translate="job3_date">jun. 2024 – actualidad</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p data-translate="job3_desc">Formación de niños y adolescentes en programación (Scratch, Desarrollo Web/Móvil), diseñando sesiones educativas y fomentando un ambiente de aprendizaje creativo e inclusivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="habilidades">
+            <h2 class="fade-in-element" data-translate="skills_title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category"><h3 data-translate="skill_cat1_title">Backend/API</h3><p data-translate="skill_cat1_desc">Python, Django, FastAPI, Node.js, C# .NET, RESTful, Java, Spring Boot, Delphi</p></div>
+                <div class="skill-category"><h3 data-translate="skill_cat2_title">Frontend/UI</h3><p data-translate="skill_cat2_desc">HTML5, CSS3 (Flexbox, Grid), JavaScript ES6+, React.js, Bootstrap</p></div>
+                <div class="skill-category"><h3 data-translate="skill_cat3_title">Automatización</h3><p data-translate="skill_cat3_desc">TestComplete (VisualBasic), Selenium, Beautiful Soup, Cypress</p></div>
+                <div class="skill-category"><h3 data-translate="skill_cat4_title">ERP</h3><p data-translate="skill_cat4_desc">Gestión de requerimientos, Informes y vistas, Permisos de usuario, Módulos</p></div>
+                <div class="skill-category"><h3 data-translate="skill_cat5_title">Metodologías</h3><p data-translate="skill_cat5_desc">Scrum, Resolución de incidencias, Análisis de circuitos empresariales</p></div>
+            </div>
+        </section>
+        
+        <!-- PROYECTOS -->
+        <section id="proyectos">
+            <h2 class="fade-in-element" data-translate="projects_title">Proyectos Destacados</h2>
+            <div class="projects-carousel">
+                <div class="project-card">
+                    <div class="project-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22h-6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8"/><path d="M18 14h-4"/><path d="M16 12v4"/></svg></div>
+                    <h3 data-translate="project1_title">Portafolio Dinámico</h3>
+                    <p data-translate="project1_desc">Gestor de CVs con roles y CRUD. Hecho con ASP.NET Core y React.</p>
+                    <div class="project-links-container">
+                        <a href="https://github.com/MiqueasDrovetta/React-Portafolio" target="_blank" class="project-link" data-translate="project_link">Ver en GitHub</a>
+                        <a href="https://miqueasdrovetta.github.io/React-Portafolio/" target="_blank" class="project-link project-link-alt" data-translate="project_preview">Vista Previa</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
+                    <h3 data-translate="project2_title">Chat de Voz</h3>
+                    <p data-translate="project2_desc">Salas de voz con moderación por votos. Creado con React y Vite.</p>
+                    <div class="project-links-container">
+                        <a href="https://github.com/MiqueasDrovetta/chat-de-voz" target="_blank" class="project-link" data-translate="project_link">Ver en GitHub</a>
+                        <a href="https://miqueasdrovetta.github.io/chat-de-voz/" target="_blank" class="project-link project-link-alt" data-translate="project_preview">Vista Previa</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                     <div class="project-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+                    <h3 data-translate="project3_title">Prototipo con Bootstrap</h3>
+                    <p data-translate="project3_desc">Prototipo de web para instituto técnico usando Bootstrap.</p>
+                    <div class="project-links-container">
+                        <a href="https://github.com/MiqueasDrovetta/Bootstrap" target="_blank" class="project-link" data-translate="project_link">Ver en GitHub</a>
+                        <a href="https://miqueasdrovetta.github.io/Bootstrap/" target="_blank" class="project-link project-link-alt" data-translate="project_preview">Vista Previa</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <h2 class="fade-in-element" data-translate="contact_title">Contacto</h2>
+            <p class="fade-in-element" data-translate="contact_subtitle">Conectemos y creemos algo increíble.</p>
+            <div class="contact-links">
+                <a href="mailto:miqueasdrovetta@outlook.com" data-translate="contact_email">Email</a>
+                <a href="https://www.linkedin.com/in/miqueasdrovetta" target="_blank">LinkedIn</a>
+                <a href="CV_Miqueas_Drovetta.pdf" download="CV_Miqueas_Drovetta.pdf" data-translate="contact_cv">CV Completo</a>
+            </div>
+        </section>
+    </div>
+
+    <nav class="bottom-nav">
+        <button data-target="home" data-translate="nav_home">Home</button>
+        <button data-target="experiencia" data-translate="nav_experience">Experiencia</button>
+        <button data-target="habilidades" data-translate="nav_skills">Habilidades</button>
+        <button data-target="proyectos" data-translate="nav_projects">Proyectos</button>
+        <button data-target="contacto" data-translate="nav_contact">Contacto</button>
+    </nav>
+
+    <div class="floating-controls">
+        <button id="theme-toggle">
+            <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="language-toggle">EN</button>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>

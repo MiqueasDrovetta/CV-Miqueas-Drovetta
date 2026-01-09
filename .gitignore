@@ -1,0 +1,11 @@
+# Archivos de entorno y logs
+**/.idx
+*.log
+
+# Documentación interna del proyecto
+GEMINI.md
+blueprint.md
+
+# Configuración de Firebase
+.firebaserc
+firebase.json
