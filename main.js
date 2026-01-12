@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         es: {
             hero_subtitle: "Software Developer | Performance Optimization",
             profile_text: "Desarrollador con 3 años en el rubro IT y experiencia en mantenimiento y desarrollo de software ERP. Amplio conocimiento de circuitos empresariales, gestión de requerimientos, resolución de incidencias, permisos de usuario, vistas personalizadas e informes. Fuerte dominio de .NET, Git/GitHub y automatización de procesos.",
-            experience_title: "Experiencia y Educación",
+            experience_title: "Experiencia Laboral",
+            education_title: "Educación",
             job1_title: "Backend Developer - Flexxus",
             job1_date: "may. 2023 – actualidad",
             job1_desc1: "Resolución de incidentes en módulos ERP y análisis de causa raíz.",
@@ -20,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
             job3_title: "Voluntario Educativo - Coderdojo Córdoba",
             job3_date: "jun. 2024 – actualidad",
             job3_desc: "Formación de niños y adolescentes en programación (Scratch, Desarrollo Web/Móvil), diseñando sesiones educativas y fomentando un ambiente de aprendizaje creativo e inclusivo.",
+            education1_title: "Técnico en Desarrollo de Software - Instituto Técnico Superior Córdoba",
+            education1_date: "mar. 2022 – dic. 2023",
+            education1_desc: "Formación técnica completa en desarrollo de software, cubriendo Frontend (HTML, CSS, JS), Backend (C#, Python) y bases de datos (SQL Server, MySQL). Sólida experiencia en APIs REST, control de versiones con Git y metodologías ágiles. Proyecto final destacado: un sistema de gestión de portafolios con .NET, Entity Framework y React.",
+            education2_title: "Técnico en Electricidad y Electrónica - IPET Nº250",
+            education2_date: "mar. 2008 – dic. 2013",
+            education2_desc: "Formación técnica en electricidad y electrónica, con énfasis en programación de bajo nivel (C++), microcontroladores (PIC, Arduino) y sistemas de control industrial (PLC).",
             skills_title: "Habilidades Técnicas",
             skill_cat1_title: "Backend/API",
             skill_cat1_desc: "Python, Django, FastAPI, Node.js, C# .NET, RESTful, Java, Spring Boot, Delphi",
@@ -53,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         en: {
             hero_subtitle: "Software Developer | Performance Optimization",
             profile_text: "Developer with 3 years in the IT industry, experienced in ERP software maintenance and development. Broad knowledge of business circuits, requirements management, incident resolution, user permissions, custom views, and reports. Strong command of .NET, Git/GitHub, and process automation.",
-            experience_title: "Experience & Education",
+            experience_title: "Work Experience",
+            education_title: "Education",
             job1_title: "Backend Developer - Flexxus",
             job1_date: "May 2023 – Present",
             job1_desc1: "Incident resolution in ERP modules and root cause analysis.",
@@ -67,6 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
             job3_title: "Educational Volunteer - Coderdojo Córdoba",
             job3_date: "Jun 2024 – Present",
             job3_desc: "Training children and teenagers in programming (Scratch, Web/Mobile Development), designing educational sessions, and fostering a creative and inclusive learning environment.",
+            education1_title: "Technician in Software Development - Instituto Técnico Superior Córdoba",
+            education1_date: "Mar 2022 – Dec 2023",
+            education1_desc: "Comprehensive technical training in software development, covering Frontend (HTML, CSS, JS), Backend (C#, Python), and databases (SQL Server, MySQL). Solid experience in REST APIs, version control with Git, and agile methodologies. Featured final project: a portfolio management system using .NET, Entity Framework, and React.",
+            education2_title: "Technician in Electricity and Electronics - IPET Nº250",
+            education2_date: "Mar 2008 – Dec 2013",
+            education2_desc: "Technical training in electricity and electronics, with an emphasis on low-level programming (C++), microcontrollers (PIC, Arduino), and industrial control systems (PLC).",
             skills_title: "Technical Skills",
             skill_cat1_title: "Backend/API",
             skill_cat1_desc: "Python, Django, FastAPI, Node.js, C# .NET, RESTful, Java, Spring Boot, Delphi",
@@ -150,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Cargar idioma guardado
-    const savedLang = localStorage.getItem('language') || 'es';
+    const savedLang = localStorage.getItem('language') || 'en';
     currentLang = savedLang;
     updateTexts(currentLang);
 
@@ -178,11 +192,19 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const content = header.nextElementSibling;
             const isActive = content.style.maxHeight && content.style.maxHeight !== '0px';
-            document.querySelectorAll('.timeline-content').forEach(item => item.style.maxHeight = '0px');
+            // Cerrar todos los items antes de abrir el nuevo
+            document.querySelectorAll('.timeline-content').forEach(item => {
+                if (item !== content) {
+                    item.style.maxHeight = '0px';
+                }
+            });
             if (!isActive) {
                 content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = '0px';
             }
         });
+        // Iniciar todos cerrados
         header.nextElementSibling.style.maxHeight = '0px';
     });
 
